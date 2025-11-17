@@ -10,9 +10,17 @@ footer {
     height: 120px;
     width: 100%;
     background: var(--orange);
+    display: flex;
+    align-items: center;
 }
 
 main{
     min-height: calc(100vh - 240px);
     width: 100%;
+}
+
+.orderLogo{
+    height: 100px;
+    width: 200px;
+    margin: 10px;
 }
