@@ -1,4 +1,4 @@
-let myDishes = [
+let mySoups = [
     {
         "name": "TOM KHA",
         "price": 6.90,
@@ -22,7 +22,10 @@ let myDishes = [
         "price": 6.90,
         "description": "Glasnudelsuppe",
         "incredients": "Kohl, Karotten, Mu-Err-Pilze, Koriander",
-    },
+    }
+]
+
+let mySalads = [
     {
         "name": "SOM TAM",
         "price": 13.50,
@@ -40,7 +43,10 @@ let myDishes = [
         "price": 13.90,
         "description": "Schweinehack Salat",
         "incredients": "Zitronengras, Minze, Koriander, Limettenblätter, Chili, geröstete Reiskörner",
-    },
+    }
+]
+
+let myCurrys = [
     {
         "name": "GÄNG PED",
         "price": 16.50,
@@ -58,7 +64,10 @@ let myDishes = [
         "price": 16.50,
         "description": "Ananas Curry",
         "incredients": "Thai-Basilikum, Bambus, Aubergine, Bohnen, Tomate, Zucchini, Paprika - leicht scharf",
-    },
+    }
+]
+
+let myStreetfoodDishes = [
     {
         "name": "PAD KRAPAO",
         "price": 16.90,
@@ -76,7 +85,10 @@ let myDishes = [
         "price": 16.50,
         "description": "Tofu mit Cashewkernen",
         "incredients": "Thai-Chilipaste, Knoblauch, Zwiebel, Paprika, Champignon, Bambu",
-    },
+    }
+]
+
+let myNoodleRiceDishes = [
     {
         "name": "PAD THAI",
         "price": 15.50,
@@ -100,7 +112,10 @@ let myDishes = [
         "price": 16.90,
         "description": "Glasnudeln Gebraten Sukiyaki",
         "incredients": "Sprossen, Chinakohl, Lauch, Sellerie, Sesam, Erdnuss, Limette",
-    },
+    }
+]
+
+let myDesserts = [
     {
         "name": "KAO NIAO MAMUANG",
         "price": 7.90,
@@ -118,5 +133,5 @@ let myDishes = [
         "price": 6.90,
         "description": "Gebackene Banane - mit Vanilleeis",
         "incredients": "Sesam, Kokosflocken, Honig",
-    },
+    }
 ]
