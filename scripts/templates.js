@@ -1,58 +1,58 @@
-function getSoupsTemplate(){
+function getSoupsTemplate(j){
     return ` 
-    <h3>${mySoups[].name}</h3>
+    <h3>${mySoups[j].name}</h3>
     <button>Hinzufügen</button>
-    <p>${mySoups[].description}</p>
-    <p>${mySoups[].incredients}</p>
-    <p>${mySoups[].price} €</p>
+    <p>${mySoups[j].description}</p>
+    <p>${mySoups[j].incredients}</p>
+    <p>${mySoups[j].price} €</p>
     `
 }
 
-function getSaladsTemplate(){
+function getSaladsTemplate(k){
     return `
-    <h3>${mySalads[].name}</h3>
+    <h3>${mySalads[k].name}</h3>
     <button>Hinzufügen</button>
-    <p>${mySalads[].description}</p>
-    <p>${mySalads[].incredients}</p>
-    <p>${mySalads[].price} €</p>`
+    <p>${mySalads[k].description}</p>
+    <p>${mySalads[k].incredients}</p>
+    <p>${mySalads[k].price} €</p>`
 }
 
-function getCurrysTemplate(){
+function getCurrysTemplate(l){
     return `
-    <h3>${myCurrys[].name}</h3>
+    <h3>${myCurrys[l].name}</h3>
     <button>Hinzufügen</button>
-    <p>${myCurrys[].description}</p>
-    <p>${myCurrys[].incredients}</p>
-    <p>${myCurrys[].price} €</p>
+    <p>${myCurrys[l].description}</p>
+    <p>${myCurrys[l].incredients}</p>
+    <p>${myCurrys[l].price} €</p>
     `
 }
 
-function getStreetfoodsTemplate(){
+function getStreetfoodsTemplate(m){
     return `
-    <h3>${myStreetfoodDishes[].name}</h3>
+    <h3>${myStreetfoodDishes[m].name}</h3>
     <button>Hinzufügen</button>
-    <p>${myStreetfoodDishes[].description}</p>
-    <p>${myStreetfoodDishes[].incredients}</p>
-    <p>${myStreetfoodDishes[].price} €</p>
+    <p>${myStreetfoodDishes[m].description}</p>
+    <p>${myStreetfoodDishes[m].incredients}</p>
+    <p>${myStreetfoodDishes[m].price} €</p>
     `
 }
 
-function getNoddleRiceTemplate(){
+function getNoddleRiceTemplate(n){
     return `
-    <h3>${myNoodleRiceDishes[].name}</h3>
+    <h3>${myNoodleRiceDishes[n].name}</h3>
     <button>Hinzufügen</button>
-    <p>${myNoodleRiceDishes[].description}</p>
-    <p>${myNoodleRiceDishes[].incredients}</p>
-    <p>${myNoodleRiceDishes[].price} €</p>
+    <p>${myNoodleRiceDishes[n].description}</p>
+    <p>${myNoodleRiceDishes[n].incredients}</p>
+    <p>${myNoodleRiceDishes[n].price} €</p>
     `
 }
 
-function getDessertsTemplate(){
+function getDessertsTemplate(o){
     return `
-    <h3>${myDesserts[].name}</h3>
+    <h3>${myDesserts[o].name}</h3>
     <button>Hinzufügen</button>
-    <p>${myDesserts[].description}</p>
-    <p>${myDesserts[].incredients}</p>
-    <p>${myDesserts[].price} €</p>
+    <p>${myDesserts[o].description}</p>
+    <p>${myDesserts[o].incredients}</p>
+    <p>${myDesserts[o].price} €</p>
     `
 }
