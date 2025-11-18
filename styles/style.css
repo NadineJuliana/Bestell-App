@@ -19,8 +19,24 @@ main{
     width: 100%;
 }
 
-.orderLogo{
+
+/* headlines */
+
+/* container */
+.order_logo{
     height: 100px;
     width: 200px;
     margin: 10px;
+}
+
+.restaurant_logo{
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu_images{
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
 }
