@@ -40,3 +40,36 @@ main{
     width: 100%;
     object-fit: cover;
 }
+
+.order_total_menu{
+    display: flex;
+}
+
+.total_menu{
+    width: calc(100% - 400px);
+}
+
+.total_basket{
+    width: 400px;
+    flex-grow: 1;
+    background-color: aqua;
+    padding: 10px;
+}
+
+/* .basket_content{
+
+}
+
+.amount_content{
+
+} */
+
+th {
+    text-align: start;
+    width: 180px;
+}
+
+td {
+    text-align: end;
+    width: 180px;
+}
