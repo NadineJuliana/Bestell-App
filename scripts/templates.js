@@ -56,3 +56,28 @@ function getDessertsTemplate(o){
     <p>${myDesserts[o].price} €</p>
     `
 }
+
+function getBasketTemplate(){
+    return`
+    <div class="basket_content" id="basketRef">
+    
+    </div>
+    <div class="amount_content" id="amountRef">
+        <table>
+            <tr>
+                <th>Zwischensumme</th>
+                <td>€</td>
+            </tr>
+            <tr>
+                <th>Lieferkosten</th>
+                <td>5€</td>
+            </tr>
+
+            <tr>
+                <th><b>Gesamt</b></th>
+                <td><b>€</b></td>
+            </tr>
+        </table>
+    </div>
+    `
+}
