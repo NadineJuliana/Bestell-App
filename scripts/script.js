@@ -5,6 +5,10 @@ const currysRef = document.getElementById('thaiCurrysRef');
 const streetfoodRef = document.getElementById('streetfoodRef');
 const noodlericeRef = document.getElementById('noddlesRiceRef');
 const dessertsRef = document.getElementById('dessertsRef');
+const totalBasket = document.getElementById('basket');
+const basketRef = document.getElementById('basketRef');
+const amountRef = document.getElementById('amountRef');
+
 
 function renderTotalMenu() {
     renderSoupMenu();
@@ -13,6 +17,7 @@ function renderTotalMenu() {
     renderStreetfoodMenu();
     renderNoodlesRiceMenu();
     renderDessertsMenu();
+    renderBasket();
 }
 
 function renderSoupMenu(){
@@ -52,4 +57,8 @@ function renderDessertsMenu(){
     dessertsRef.innerHTML += getDessertsTemplate(o);
     
    }
+}
+
+function renderBasket(){
+    totalBasket.innerHTML += getBasketTemplate();
 }
