@@ -134,3 +134,15 @@ function addDessertsToBasket(indexDessert){
     renderBasketRef();
 }
 
+function calculatePlusBasket(indexBasket){
+    myBasket[indexBasket].amount ++;
+    renderBasketRef();
+    
+}
+
+function calculateMinusBasket(indexBasket){
+    if (myBasket[indexBasket].amount > 1) {
+        myBasket[indexBasket].amount --;
+    } 
+    renderBasketRef();
+}
