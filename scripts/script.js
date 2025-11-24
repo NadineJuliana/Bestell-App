@@ -1,4 +1,4 @@
-const totalMenuRef = document.getElementById('menu');
+const totalMenuRef = document.getElementById('totalmenu');
 const soupsRef = document.getElementById('thaiSoupsRef');
 const saladsRef = document.getElementById('thaiSaladsRef');
 const currysRef = document.getElementById('thaiCurrysRef');
@@ -8,7 +8,7 @@ const dessertsRef = document.getElementById('dessertsRef');
 const totalBasket = document.getElementById('basket');
 const basketRef = document.getElementById('basketRef');
 const amountRef = document.getElementById('amountRef');
-
+const basketContent = document.getElementById('basketContent');
 
 function renderTotalMenu() {
     renderSoupMenu();
@@ -17,48 +17,120 @@ function renderTotalMenu() {
     renderStreetfoodMenu();
     renderNoodlesRiceMenu();
     renderDessertsMenu();
-    renderBasket();
+    // renderBasket();
 }
 
 function renderSoupMenu(){
-    for (let j = 0; j < mySoups.length; j++) {
-        soupsRef.innerHTML += getSoupsTemplate(j);
+    for (let indexSoup = 0; indexSoup < mySoups.length; indexSoup++) {
+        soupsRef.innerHTML += getSoupsTemplate(indexSoup);
     }
 }
 
 function renderSaladMenu(){
-    for (let k = 0; k < mySalads.length; k++) {
-        saladsRef.innerHTML += getSaladsTemplate(k);
+    for (let indexSalad = 0; indexSalad < mySalads.length; indexSalad++) {
+        saladsRef.innerHTML += getSaladsTemplate(indexSalad);
     }
 }
 
 function renderCurryMenu(){
-    for (let l = 0; l < myCurrys.length; l++) {
-        currysRef.innerHTML += getCurrysTemplate(l);
+    for (let indexCurry = 0; indexCurry < myCurrys.length; indexCurry++) {
+        currysRef.innerHTML += getCurrysTemplate(indexCurry);
     }
 }
 
 function renderStreetfoodMenu(){
-    for (let m = 0; m < myStreetfoodDishes.length; m++) {
-        streetfoodRef.innerHTML += getStreetfoodsTemplate(m);
+    for (let indexStreetfood = 0; indexStreetfood < myStreetfoodDishes.length; indexStreetfood++) {
+        streetfoodRef.innerHTML += getStreetfoodsTemplate(indexStreetfood);
         
     }
 }
 
 function renderNoodlesRiceMenu() {
-    for (let n = 0; n < myNoodleRiceDishes.length; n++) {
-        noodlericeRef.innerHTML += getNoddleRiceTemplate(n);
+    for (let indexNoodleRice = 0; indexNoodleRice < myNoodleRiceDishes.length; indexNoodleRice++) {
+        noodlericeRef.innerHTML += getNoddleRiceTemplate(indexNoodleRice);
         
     }
 }
 
 function renderDessertsMenu(){
-   for (let o = 0; o < myDesserts.length; o++) {
-    dessertsRef.innerHTML += getDessertsTemplate(o);
+   for (let indexDessert = 0; indexDessert < myDesserts.length; indexDessert++) {
+    dessertsRef.innerHTML += getDessertsTemplate(indexDessert);
     
    }
 }
 
-function renderBasket(){
-    totalBasket.innerHTML += getBasketTemplate();
+// function renderBasket(){
+//     totalBasket.innerHTML += getBasketTemplate();
+   
+// }
+
+function renderBasketRef() {
+    basketRef.innerHTML = "";
+
+    for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
+        basketRef.innerHTML += getBasketRefTemplate(indexBasket);
+        
+    }
+   
 }
+
+function addSoupsToBasket(indexSoup){
+    const soupToAdd = mySoups[indexSoup];
+    if (!myBasket.includes(soupToAdd)) {
+        myBasket.push(soupToAdd);
+    } else {
+       soupToAdd.amount += 1;
+    }
+    renderBasketRef();  
+}
+
+function addSaladsToBasket(indexSalad){
+    const saladToAdd = mySalads[indexSalad];
+    if (!myBasket.includes(saladToAdd)) {
+        myBasket.push(saladToAdd);
+    } else {
+        saladToAdd.amount += 1;
+    }
+    renderBasketRef();
+}
+
+function addCurrysToBasket(indexCurry) {
+    const curryToAdd = myCurrys[indexCurry];
+    if (!myBasket.includes(curryToAdd)) {
+        myBasket.push(curryToAdd);
+    } else {
+        curryToAdd.amount += 1;
+    }
+    renderBasketRef();
+}
+
+function addStreetfoodToBasket(indexStreetfood){
+    const streetfoodToAdd = myStreetfoodDishes[indexStreetfood];
+    if (!myBasket.includes(streetfoodToAdd)) {
+        myBasket.push(streetfoodToAdd);
+    } else {
+        streetfoodToAdd.amount += 1;
+    }
+    renderBasketRef();
+}
+
+function addNoodlerRiceToBasket(indexNoodleRice){
+    const noodleRiceToAdd = myNoodleRiceDishes[indexNoodleRice];
+    if (!myBasket.includes(noodleRiceToAdd)) {
+        myBasket.push(noodleRiceToAdd);
+    } else {
+        noodleRiceToAdd.amount += 1;
+    }
+    renderBasketRef();
+}
+
+function addDessertsToBasket(indexDessert){
+    const dessertToAdd = myDesserts[indexDessert];
+    if (!myBasket.includes(dessertToAdd)) {
+        myBasket.push(dessertToAdd);
+    } else {
+        dessertToAdd.amount += 1;
+    }
+    renderBasketRef();
+}
+
