@@ -1,0 +1,47 @@
+.total_basket{
+    max-height: 100vh;
+    width: 250px;
+    flex-grow: 1;
+    background-color: tan;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    border: 1px black;
+}
+
+.basket_content{
+    max-height: 80vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 0.5px black;
+}
+
+.basket_calculator{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border: 0.5px solid black;
+}
+
+.basket_calculate_items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.amount_content{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.amount_content_ref{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
