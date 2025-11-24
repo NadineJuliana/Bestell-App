@@ -22,45 +22,41 @@ function renderTotalMenu() {
     renderStreetfoodMenu();
     renderNoodlesRiceMenu();
     renderDessertsMenu();
-    // renderBasket();
 }
 
-function renderSoupMenu(){
+function renderSoupMenu() {
     for (let indexSoup = 0; indexSoup < mySoups.length; indexSoup++) {
         soupsRef.innerHTML += getSoupsTemplate(indexSoup);
     }
 }
 
-function renderSaladMenu(){
+function renderSaladMenu() {
     for (let indexSalad = 0; indexSalad < mySalads.length; indexSalad++) {
         saladsRef.innerHTML += getSaladsTemplate(indexSalad);
     }
 }
 
-function renderCurryMenu(){
+function renderCurryMenu() {
     for (let indexCurry = 0; indexCurry < myCurrys.length; indexCurry++) {
         currysRef.innerHTML += getCurrysTemplate(indexCurry);
     }
 }
 
-function renderStreetfoodMenu(){
+function renderStreetfoodMenu() {
     for (let indexStreetfood = 0; indexStreetfood < myStreetfoodDishes.length; indexStreetfood++) {
-        streetfoodRef.innerHTML += getStreetfoodsTemplate(indexStreetfood);
-        
+        streetfoodRef.innerHTML += getStreetfoodsTemplate(indexStreetfood);  
     }
 }
 
 function renderNoodlesRiceMenu() {
     for (let indexNoodleRice = 0; indexNoodleRice < myNoodleRiceDishes.length; indexNoodleRice++) {
-        noodlericeRef.innerHTML += getNoddleRiceTemplate(indexNoodleRice);
-        
+        noodlericeRef.innerHTML += getNoddleRiceTemplate(indexNoodleRice);  
     }
 }
 
-function renderDessertsMenu(){
+function renderDessertsMenu() {
    for (let indexDessert = 0; indexDessert < myDesserts.length; indexDessert++) {
     dessertsRef.innerHTML += getDessertsTemplate(indexDessert);
-    
    }
 }
 
@@ -73,7 +69,7 @@ function renderBasketRef() {
     calculateSubtotal();
 }
 
-function addSoupsToBasket(indexSoup){
+function addSoupsToBasket(indexSoup) {
     const soupToAdd = mySoups[indexSoup];
     if (!myBasket.includes(soupToAdd)) {
         myBasket.push(soupToAdd);
@@ -83,7 +79,7 @@ function addSoupsToBasket(indexSoup){
     renderBasketRef();  
 }
 
-function addSaladsToBasket(indexSalad){
+function addSaladsToBasket(indexSalad) {
     const saladToAdd = mySalads[indexSalad];
     if (!myBasket.includes(saladToAdd)) {
         myBasket.push(saladToAdd);
@@ -103,7 +99,7 @@ function addCurrysToBasket(indexCurry) {
     renderBasketRef();
 }
 
-function addStreetfoodToBasket(indexStreetfood){
+function addStreetfoodToBasket(indexStreetfood) {
     const streetfoodToAdd = myStreetfoodDishes[indexStreetfood];
     if (!myBasket.includes(streetfoodToAdd)) {
         myBasket.push(streetfoodToAdd);
@@ -113,7 +109,7 @@ function addStreetfoodToBasket(indexStreetfood){
     renderBasketRef();
 }
 
-function addNoodlerRiceToBasket(indexNoodleRice){
+function addNoodlerRiceToBasket(indexNoodleRice) {
     const noodleRiceToAdd = myNoodleRiceDishes[indexNoodleRice];
     if (!myBasket.includes(noodleRiceToAdd)) {
         myBasket.push(noodleRiceToAdd);
@@ -123,7 +119,7 @@ function addNoodlerRiceToBasket(indexNoodleRice){
     renderBasketRef();
 }
 
-function addDessertsToBasket(indexDessert){
+function addDessertsToBasket(indexDessert) {
     const dessertToAdd = myDesserts[indexDessert];
     if (!myBasket.includes(dessertToAdd)) {
         myBasket.push(dessertToAdd);
@@ -133,12 +129,12 @@ function addDessertsToBasket(indexDessert){
     renderBasketRef();
 }
 
-function calculatePlusBasket(indexBasket){
+function calculatePlusBasket(indexBasket) {
     myBasket[indexBasket].amount ++;
     renderBasketRef();  
 }
 
-function calculateMinusBasket(indexBasket){
+function calculateMinusBasket(indexBasket) {
     if (myBasket[indexBasket].amount > 1) {
         myBasket[indexBasket].amount --;  
     } else if (myBasket[indexBasket].amount == 1)  {
@@ -147,7 +143,7 @@ function calculateMinusBasket(indexBasket){
     renderBasketRef();
 }
 
-function calculateSubtotal(){
+function calculateSubtotal() {
     let subtotal = 0;
     for (let menu of myBasket) {
         subtotal += menu.price * menu.amount;
@@ -156,7 +152,7 @@ function calculateSubtotal(){
     sumRef.innerHTML = getSumTemplate(subtotal);
 }
 
-function deleteFromBasket(indexBasket){
+function deleteFromBasket(indexBasket) {
     myBasket.splice(indexBasket, 1);
     const basketContent = document.getElementById(`basketContent${indexBasket}`);
     basketContent.innerHTML = "";
