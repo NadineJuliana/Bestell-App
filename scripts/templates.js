@@ -1,83 +1,93 @@
-function getSoupsTemplate(j){
+function getSoupsTemplate(indexSoup){
     return ` 
-    <h3>${mySoups[j].name}</h3>
-    <button>Hinzufügen</button>
-    <p>${mySoups[j].description}</p>
-    <p>${mySoups[j].incredients}</p>
-    <p>${mySoups[j].price} €</p>
+    <h3>${mySoups[indexSoup].name}</h3>
+    <button onclick="addSoupsToBasket(${indexSoup})">Hinzufügen</button>
+    <p>${mySoups[indexSoup].description}</p>
+    <p>${mySoups[indexSoup].incredients}</p>
+    <p>${mySoups[indexSoup].price} €</pindexSalad
     `
 }
 
-function getSaladsTemplate(k){
+function getSaladsTemplate(indexSalad){
     return `
-    <h3>${mySalads[k].name}</h3>
-    <button>Hinzufügen</button>
-    <p>${mySalads[k].description}</p>
-    <p>${mySalads[k].incredients}</p>
-    <p>${mySalads[k].price} €</p>`
+    <h3>${mySalads[indexSalad].name}</h3>
+    <button onclick="addSaladsToBasket(${indexSalad})">Hinzufügen</button>
+    <p>${mySalads[indexSalad].description}</p>
+    <p>${mySalads[indexSalad].incredients}</p>
+    <p>${mySalads[indexSalad].price} €</p>`
 }
 
-function getCurrysTemplate(l){
+function getCurrysTemplate(indexCurry){
     return `
-    <h3>${myCurrys[l].name}</h3>
-    <button>Hinzufügen</button>
-    <p>${myCurrys[l].description}</p>
-    <p>${myCurrys[l].incredients}</p>
-    <p>${myCurrys[l].price} €</p>
+    <h3>${myCurrys[indexCurry].name}</h3>
+    <button onclick="addCurrysToBasket(${indexCurry})">Hinzufügen</button>
+    <p>${myCurrys[indexCurry].description}</p>
+    <p>${myCurrys[indexCurry].incredients}</p>
+    <p>${myCurrys[indexCurry].price} €</p>
     `
 }
 
-function getStreetfoodsTemplate(m){
+function getStreetfoodsTemplate(indexStreetfood){
     return `
-    <h3>${myStreetfoodDishes[m].name}</h3>
-    <button>Hinzufügen</button>
-    <p>${myStreetfoodDishes[m].description}</p>
-    <p>${myStreetfoodDishes[m].incredients}</p>
-    <p>${myStreetfoodDishes[m].price} €</p>
+    <h3>${myStreetfoodDishes[indexStreetfood].name}</h3>
+    <button onclick="addStreetfoodToBasket(${indexStreetfood})">Hinzufügen</button>
+    <p>${myStreetfoodDishes[indexStreetfood].description}</p>
+    <p>${myStreetfoodDishes[indexStreetfood].incredients}</p>
+    <p>${myStreetfoodDishes[indexStreetfood].price} €</p>
     `
 }
 
-function getNoddleRiceTemplate(n){
+function getNoddleRiceTemplate(indexNoodleRice){
     return `
-    <h3>${myNoodleRiceDishes[n].name}</h3>
-    <button>Hinzufügen</button>
-    <p>${myNoodleRiceDishes[n].description}</p>
-    <p>${myNoodleRiceDishes[n].incredients}</p>
-    <p>${myNoodleRiceDishes[n].price} €</p>
+    <h3>${myNoodleRiceDishes[indexNoodleRice].name}</h3>
+    <button onclick="addNoodlerRiceToBasket(${indexNoodleRice})">Hinzufügen</button>
+    <p>${myNoodleRiceDishes[indexNoodleRice].description}</p>
+    <p>${myNoodleRiceDishes[indexNoodleRice].incredients}</p>
+    <p>${myNoodleRiceDishes[indexNoodleRice].price} €</p>
     `
 }
 
-function getDessertsTemplate(o){
+function getDessertsTemplate(indexDessert){
     return `
-    <h3>${myDesserts[o].name}</h3>
-    <button>Hinzufügen</button>
-    <p>${myDesserts[o].description}</p>
-    <p>${myDesserts[o].incredients}</p>
-    <p>${myDesserts[o].price} €</p>
+    <h3>${myDesserts[indexDessert].name}</h3>
+    <button onclick="addDessertsToBasket(${indexDessert})">Hinzufügen</button>
+    <p>${myDesserts[indexDessert].description}</p>
+    <p>${myDesserts[indexDessert].incredients}</p>
+    <p>${myDesserts[indexDessert].price} €</p>
     `
 }
 
-function getBasketTemplate(){
-    return`
-    <div class="basket_content" id="basketRef">
+// function getBasketTemplate(){
+//     return`
     
-    </div>
-    <div class="amount_content" id="amountRef">
-        <table>
-            <tr>
-                <th>Zwischensumme</th>
-                <td>€</td>
-            </tr>
-            <tr>
-                <th>Lieferkosten</th>
-                <td>5€</td>
-            </tr>
+//     <div class="amount_content" id="amountRef">
+//         <table>
+//             <tr>
+//                 <th>Zwischensumme</th>
+//                 <td>0 €</td>
+//             </tr>
+//             <tr>
+//                 <th>Lieferkosten</th>
+//                 <td>5 €</td>
+//             </tr>
+//             <tr>
+//                 <th><b>Gesamt</b></th>
+//                 <td><b>0 €</b></td>
+//             </tr>
+//         </table>
+//     </div>
+//     `
+// }
 
-            <tr>
-                <th><b>Gesamt</b></th>
-                <td><b>€</b></td>
-            </tr>
-        </table>
+function getBasketRefTemplate(indexBasket){
+    return `
+    <div class="basket_calculator" id="basketContent${indexBasket}">
+        <h3>${myBasket[indexBasket].name}</h3>
+        <button onclick="calculatePlusBasket(${indexBasket})">+</button>
+        <p>${myBasket[indexBasket].amount}</p>
+        <button onclick="calculateMinusBasket(${indexBasket})">-</button>
+        <p>${myBasket[indexBasket].price}</p>
     </div>
     `
 }
+
