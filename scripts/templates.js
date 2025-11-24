@@ -61,10 +61,12 @@ function getBasketRefTemplate(indexBasket){
     return `
     <div class="basket_calculator" id="basketContent${indexBasket}">
         <h3>${myBasket[indexBasket].name}</h3>
+        <div class="basket_calculate_items">
         <button onclick="calculatePlusBasket(${indexBasket})">+</button>
         <p>${myBasket[indexBasket].amount}</p>
         <button onclick="calculateMinusBasket(${indexBasket})">-</button>
-        <p>${(myBasket[indexBasket].price * myBasket[indexBasket].amount).toFixed(2)}</p>
+        </div>
+        <p>${(myBasket[indexBasket].price * myBasket[indexBasket].amount).toFixed(2)} €</p>
         <button onclick="deleteFromBasket(${indexBasket})">Löschen</button>
     </div>
     `
