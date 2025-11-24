@@ -1,14 +1,19 @@
 const totalMenuRef = document.getElementById('totalmenu');
+
 const soupsRef = document.getElementById('thaiSoupsRef');
 const saladsRef = document.getElementById('thaiSaladsRef');
 const currysRef = document.getElementById('thaiCurrysRef');
 const streetfoodRef = document.getElementById('streetfoodRef');
 const noodlericeRef = document.getElementById('noddlesRiceRef');
 const dessertsRef = document.getElementById('dessertsRef');
+
 const totalBasket = document.getElementById('basket');
 const basketRef = document.getElementById('basketRef');
 const amountRef = document.getElementById('amountRef');
-const basketContent = document.getElementById('basketContent');
+
+const subtotalRef = document.getElementById('subtotal');
+const sumRef = document.getElementById('sum');
+
 
 function renderTotalMenu() {
     renderSoupMenu();
@@ -59,19 +64,13 @@ function renderDessertsMenu(){
    }
 }
 
-// function renderBasket(){
-//     totalBasket.innerHTML += getBasketTemplate();
-   
-// }
-
 function renderBasketRef() {
     basketRef.innerHTML = "";
 
     for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
         basketRef.innerHTML += getBasketRefTemplate(indexBasket);
-        
     }
-   
+    calculateSubtotal();
 }
 
 function addSoupsToBasket(indexSoup){
@@ -136,13 +135,31 @@ function addDessertsToBasket(indexDessert){
 
 function calculatePlusBasket(indexBasket){
     myBasket[indexBasket].amount ++;
-    renderBasketRef();
-    
+    renderBasketRef();  
 }
 
 function calculateMinusBasket(indexBasket){
     if (myBasket[indexBasket].amount > 1) {
-        myBasket[indexBasket].amount --;
-    } 
+        myBasket[indexBasket].amount --;  
+    } else if (myBasket[indexBasket].amount == 1)  {
+        deleteFromBasket(indexBasket);
+    }
     renderBasketRef();
+}
+
+function calculateSubtotal(){
+    let subtotal = 0;
+    for (let menu of myBasket) {
+        subtotal += menu.price * menu.amount;
+    }
+    subtotalRef.innerHTML = getSubtotalTemplate(subtotal);
+    sumRef.innerHTML = getSumTemplate(subtotal);
+}
+
+function deleteFromBasket(indexBasket){
+    myBasket.splice(indexBasket, 1);
+    const basketContent = document.getElementById(`basketContent${indexBasket}`);
+    basketContent.innerHTML = "";
+    renderBasketRef();
+    calculateSubtotal();
 }
