@@ -29,10 +29,22 @@ main{
     margin: 10px;
 }
 
-.restaurant_logo{
+.order_head_wrapper{
+    position: relative;
+}
+
+.restaurant_main_logo{
     height: 40vh;
     width: 100%;
     object-fit: cover;
+}
+
+/* .restaurant_logo{
+} */
+
+.rating{
+    display: flex;
+    gap: 8px;
 }
 
 .menu_images{
@@ -49,27 +61,3 @@ main{
     width: calc(100% - 400px);
 }
 
-.total_basket{
-    width: 400px;
-    flex-grow: 1;
-    background-color: aqua;
-    padding: 10px;
-}
-
-/* .basket_content{
-
-}
-
-.amount_content{
-
-} */
-
-th {
-    text-align: start;
-    width: 180px;
-}
-
-td {
-    text-align: end;
-    width: 180px;
-}
