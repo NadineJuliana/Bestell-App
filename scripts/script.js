@@ -1,13 +1,6 @@
-const totalMenuRef = document.getElementById('totalmenu');
+// const totalMenuRef = document.getElementById('totalmenu');
 
-const soupsRef = document.getElementById('thaiSoupsRef');
-const saladsRef = document.getElementById('thaiSaladsRef');
-const currysRef = document.getElementById('thaiCurrysRef');
-const streetfoodRef = document.getElementById('streetfoodRef');
-const noodlericeRef = document.getElementById('noddlesRiceRef');
-const dessertsRef = document.getElementById('dessertsRef');
-
-const totalBasket = document.getElementById('basket');
+// const totalBasket = document.getElementById('basket');
 const basketRef = document.getElementById('basketRef');
 const amountRef = document.getElementById('amountRef');
 const subtotalRef = document.getElementById('subtotal');
@@ -30,36 +23,42 @@ function renderTotalMenu() {
 }
 
 function renderSoupMenu() {
+    const soupsRef = document.getElementById('thaiSoupsRef');
     for (let indexSoup = 0; indexSoup < mySoups.length; indexSoup++) {
         soupsRef.innerHTML += getSoupsTemplate(indexSoup);
     }
 }
 
 function renderSaladMenu() {
+    const saladsRef = document.getElementById('thaiSaladsRef');
     for (let indexSalad = 0; indexSalad < mySalads.length; indexSalad++) {
         saladsRef.innerHTML += getSaladsTemplate(indexSalad);
     }
 }
 
 function renderCurryMenu() {
+    const currysRef = document.getElementById('thaiCurrysRef');
     for (let indexCurry = 0; indexCurry < myCurrys.length; indexCurry++) {
         currysRef.innerHTML += getCurrysTemplate(indexCurry);
     }
 }
 
 function renderStreetfoodMenu() {
+    const streetfoodRef = document.getElementById('streetfoodRef');
     for (let indexStreetfood = 0; indexStreetfood < myStreetfoodDishes.length; indexStreetfood++) {
         streetfoodRef.innerHTML += getStreetfoodsTemplate(indexStreetfood);  
     }
 }
 
 function renderNoodlesRiceMenu() {
+    const noodlericeRef = document.getElementById('noddlesRiceRef');
     for (let indexNoodleRice = 0; indexNoodleRice < myNoodleRiceDishes.length; indexNoodleRice++) {
         noodlericeRef.innerHTML += getNoddleRiceTemplate(indexNoodleRice);  
     }
 }
 
 function renderDessertsMenu() {
+    const dessertsRef = document.getElementById('dessertsRef');
    for (let indexDessert = 0; indexDessert < myDesserts.length; indexDessert++) {
     dessertsRef.innerHTML += getDessertsTemplate(indexDessert);
    }
