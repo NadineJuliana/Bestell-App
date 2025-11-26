@@ -62,10 +62,10 @@ function getDessertsTemplate(indexDessert){
     return `
     <div class="menu_selection_ref">
     <h4>${myDesserts[indexDessert].name}</h4>
-    <button onclick="addDessertsToBasket(${indexDessert})">Hinzufügen</button>
     <p>${myDesserts[indexDessert].description}</p>
     <p class="ingredients">${myDesserts[indexDessert].ingredients}</p>
     <p>${(myDesserts[indexDessert].price).toFixed(2)} €</p>
+    <button onclick="addDessertsToBasket(${indexDessert})">Hinzufügen</button>
     </div>
     `
 }
