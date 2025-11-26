@@ -1,0 +1,8 @@
+button{
+    background: whitesmoke;
+    border: 1px solid black;
+}
+
+button:hover {
+    cursor: pointer;
+}
