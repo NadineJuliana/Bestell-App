@@ -27,15 +27,15 @@
             <div>
                 <h1>Asia Cuisine</h1>
                 <div class="rating">
-                <p>Bewertung</p>
-                <div class="rating_images">
-                <img src="assets/img/star.png" alt="Stern">
-                <img src="assets/img/star.png" alt="Stern">
-                <img src="assets/img/star.png" alt="Stern">
-                <img src="assets/img/star.png" alt="Stern">
-                <img src="assets/img/star.png" alt="Stern">
-                </div>
-                <p>(4,6 von 5 Sternen)</p>
+                    <p>Bewertung</p>
+                    <div class="rating_images">
+                        <img src="assets/img/star.png" alt="Stern">
+                        <img src="assets/img/star.png" alt="Stern">
+                        <img src="assets/img/star.png" alt="Stern">
+                        <img src="assets/img/star.png" alt="Stern">
+                        <img src="assets/img/star.png" alt="Stern">
+                    </div>
+                    <p>(4,6 von 5 Sternen)</p>
                 </div>
             </div>
         </section>
@@ -51,37 +51,37 @@
 
         <section class="order_total_menu">
             <section class="total_menu" id="totalMenu">
+                <h3>Thai Suppen</h3>
+                <img class="menu_images" src="assets/img/thai-boat-noodle-5256917_1280.jpg" alt="Thai Nudelsuppe">
                 <div class="menu_selection" id="thaiSoupsRef">
-                    <h3>Thai Suppen</h3>
-                    <img class="menu_images" src="assets/img/thai-boat-noodle-5256917_1280.jpg" alt="Thai Nudelsuppe">
                 </div>
 
+                <h3>Thai Salate</h3>
+                <img class="menu_images" src="assets/img/pasta-7209002_1280.jpg" alt="Thai Salate">
                 <div class="menu_selection" id="thaiSaladsRef">
-                    <h3>Thai Salate</h3>
-                    <img class="menu_images" src="assets/img/pasta-7209002_1280.jpg" alt="Thai Salate">
                 </div>
 
+                <h3>Thai Currys</h3>
+                <img class="menu_images" src="assets/img/curry-7249247_1280.jpg" alt="Thai Curry">
                 <div class="menu_selection" id="thaiCurrysRef">
-                    <h3>Thai Currys</h3>
-                    <img class="menu_images" src="assets/img/curry-7249247_1280.jpg" alt="Thai Curry">
                 </div>
 
+                <h3>Garküche</h3>
+                <img class="menu_images" src="assets/img/meal-5921491_1280.jpg" alt="Thai Streetfood">
                 <div class="menu_selection" id="streetfoodRef">
-                    <h3>Garküche</h3>
-                    <img class="menu_images" src="assets/img/meal-5921491_1280.jpg" alt="Thai Streetfood">
                 </div>
 
+                <h3>Nudel- und Reisgerichte</h3>
+                <img class="menu_images" src="assets/img/shrimp-5940735_1280.jpg" alt="Thai Reisgericht">
                 <div class="menu_selection" id="noddlesRiceRef">
-                    <h3>Nudel- und Reisgerichte</h3>
-                    <img class="menu_images" src="assets/img/shrimp-5940735_1280.jpg" alt="Thai Reisgericht">
                 </div>
 
+                <h3>Desserts</h3>
+                <img class="menu_images" src="assets/img/mango-sticky-rice-3604851_1280.jpg" alt="Mango Sticky Rice">
                 <div class="menu_selection" id="dessertsRef">
-                    <h3>Desserts</h3>
-                    <img class="menu_images" src="assets/img/mango-sticky-rice-3604851_1280.jpg"
-                        alt="Mango Sticky Rice">
                 </div>
             </section>
+
             <section class="total_basket" id="basket">
                 <h2>Warenkorb</h2>
                 <div class="basket_content" id="basketRef">
@@ -100,11 +100,39 @@
                         <p><b>Gesamt</b></p>
                         <p><b>5.00 €</b></p>
                     </div>
+                    <button onclick="openDialog()" class="order_button" id="orderButton">Bestellen</button>
                 </div>
+            </section>
 
+            <section>
+                <dialog id="orderDialog">
+                    <p>Danke für deine Bestellung!</p>
+                    <button onclick="closeDialog()">X</button>
+                </dialog>
             </section>
         </section>
     </main>
+
+    <button onclick="toggleBasketMobile()" id="basketToggle" class="basket_toggle_button">Warenkorb</button>
+    <div class="total_basket_mobile" id="mobileBasket">
+        <h2>Warenkorb</h2>
+        <div class="basket_content_mobile" id="basketRefMobile"></div>
+        <div class="amount_content_mobile" id="amountRefMobile">
+            <div class="amount_content_ref_mobile" id="subtotalMobile">
+                <p>Zwischensumme</p>
+                <p>0.00 €</p>
+            </div>
+            <div class="amount_content_ref_mobile">
+                <p>Lieferkosten</p>
+                <p>5.00 €</p>
+            </div>
+            <div class="amount_content_ref_mobile" id="sumMobile">
+                <p><b>Gesamt</b></p>
+                <p><b>5.00 €</b></p>
+            </div>
+        </div>
+        <button onclick="openDialog()" class="order_button" id="orderButtonMobile">Bestellen</button>
+    </div>
     <footer></footer>
 </body>
 
