@@ -2,8 +2,12 @@
     margin: 0;
     scroll-behavior: smooth;
     font-family: 'Zalando Sans SemiExpanded';
+    max-width: 1920px;
 }
 
 a {
     text-decoration: none;
+    color: black;
+    padding: 8px;
+    border: 1px solid tan;
 }
