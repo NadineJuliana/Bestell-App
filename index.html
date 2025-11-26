@@ -104,12 +104,6 @@
                 </div>
             </section>
 
-            <section>
-                <dialog id="orderDialog">
-                    <p>Danke für deine Bestellung!</p>
-                    <button onclick="closeDialog()">X</button>
-                </dialog>
-            </section>
         </section>
     </main>
 
@@ -133,6 +127,14 @@
         </div>
         <button onclick="openDialog()" class="order_button" id="orderButtonMobile">Bestellen</button>
     </div>
+
+    <dialog id="orderDialog">
+        <div class="content_dialog">
+            <p>Danke für deine Bestellung!</p>
+            <button onclick="closeDialog()">X</button>
+        </div>
+    </dialog>
+    
     <footer></footer>
 </body>
 
