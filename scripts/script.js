@@ -10,10 +10,15 @@ const dessertsRef = document.getElementById('dessertsRef');
 const totalBasket = document.getElementById('basket');
 const basketRef = document.getElementById('basketRef');
 const amountRef = document.getElementById('amountRef');
-
 const subtotalRef = document.getElementById('subtotal');
 const sumRef = document.getElementById('sum');
 
+const basketRefMobile = document.getElementById('basketRefMobile');
+const amountRefMobile = document.getElementById('amountRefMobile');
+const subtotalRefMobile = document.getElementById('subtotalMobile');
+const sumRefMobile = document.getElementById('sumMobile');
+
+const dialogRef = document.getElementById('orderDialog');
 
 function renderTotalMenu() {
     renderSoupMenu();
@@ -65,6 +70,10 @@ function renderBasketRef() {
 
     for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
         basketRef.innerHTML += getBasketRefTemplate(indexBasket);
+    }
+    
+    if (basketRefMobile) {
+        basketRefMobile.innerHTML = basketRef.innerHTML;
     }
     calculateSubtotal();
 }
@@ -150,6 +159,12 @@ function calculateSubtotal() {
     }
     subtotalRef.innerHTML = getSubtotalTemplate(subtotal);
     sumRef.innerHTML = getSumTemplate(subtotal);
+    
+    if (subtotalRefMobile) {
+        subtotalRefMobile.innerHTML = subtotalRef.innerHTML;
+    } if (sumRefMobile) {
+        sumRefMobile.innerHTML = sumRef.innerHTML;
+    }
 }
 
 function deleteFromBasket(indexBasket) {
@@ -158,4 +173,28 @@ function deleteFromBasket(indexBasket) {
     basketContent.innerHTML = "";
     renderBasketRef();
     calculateSubtotal();
+}
+
+function openDialog(){
+    basketRef.innerHTML = "";
+    subtotalRef.innerHTML = "";
+    sumRef.innerHTML = "";
+    basketRefMobile.innerHTML = "";
+    subtotalRefMobile.innerHTML = "";
+    sumRefMobile.innerHTML = "";
+    myBasket.splice(0);
+    dialogRef.showModal();
+}
+
+function closeDialog(){
+    dialogRef.close();
+}
+
+function toggleBasketMobile(){
+    let toggleBasket = document.getElementById('mobileBasket');
+    if (toggleBasket.style.display === 'none'){
+        toggleBasket.style.display = 'block';
+    } else {
+        toggleBasket.style.display = 'none';
+    }
 }
