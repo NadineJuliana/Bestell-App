@@ -7,7 +7,7 @@
     position: sticky;
     top: 0;
     text-align: center;
-    border: 1px black;
+    border: 1px solid black;
 }
 
 .basket_content {
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: 0.5px black;
+    border: 0.5px solid black;
 }
 
 .basket_calculator {
@@ -49,6 +49,8 @@
     display: none;
 }
 
-.basket_toggle_button {
-    display: none;
+.toggle_button_ref{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
 }
