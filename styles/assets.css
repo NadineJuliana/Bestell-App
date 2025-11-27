@@ -1,8 +1,15 @@
 button{
     background: whitesmoke;
-    border: 1px solid black;
+    border: 1px solid tan;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+.basket_toggle_button {
+    display: none;
+    width: 200px;
+    border: 1px solid black;
+    background: tan;
 }
