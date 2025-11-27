@@ -19,7 +19,6 @@ main {
     width: 100%;
 }
 
-
 /* headlines */
 h1 {
     margin: 8px;
@@ -43,20 +42,36 @@ h3 {
     margin: 10px;
 }
 
+.outer_head_wrapper {
+    height: 40vh;
+}
+
 .order_head_wrapper {
+    background-image: url(../assets/img/curry-9746675_1280.jpg);
+    height: 35vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     position: relative;
 }
 
-.restaurant_main_logo {
-    height: 40vh;
-    width: 100%;
-    object-fit: cover;
+.restaurant_logo {
+    height: 80px;
+    width: 80px;
+    background: tan;
+    border-radius: 90%;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* .restaurant_logo{
-    position: absolute;
-    z-index: 1;
-} */
+.restaurant_description {
+    margin: 8px;
+}
 
 .rating {
     display: flex;
@@ -65,7 +80,10 @@ h3 {
 }
 
 nav {
-    padding: 8px;
+    margin: 8px;
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .menu_selection {
@@ -100,21 +118,18 @@ dialog {
     background: tan;
 }
 
-.content_dialog{
+.content_dialog {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-dialog::backdrop{
+dialog::backdrop {
     background: rgba(255, 255, 255, 0.671)
 }
 
-
-
-
-
+/* media queries */
 @media (max-width: 1023px) {
     .total_menu {
         flex-grow: 1;
@@ -131,7 +146,6 @@ dialog::backdrop{
     }
 
     .total_basket_mobile {
-        display: block;
         max-height: 40vh;
         padding: 10px;
         background-color: rgb(210, 180, 140);
@@ -157,6 +171,23 @@ dialog::backdrop{
     .basket_toggle_button {
         display: block;
     }
+}
 
+@media (max-width: 425px) {
 
+    header,
+    footer {
+        height: 100px;
+    }
+
+    .order_logo {
+        height: 80px;
+        width: 180px;
+        margin: 10px;
+    }
+
+    .total_basket_mobile {
+        padding: 4px;
+        font-size: 12px;
+    }
 }
