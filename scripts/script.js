@@ -1,13 +1,8 @@
-// const totalMenuRef = document.getElementById('totalmenu');
-
-// const totalBasket = document.getElementById('basket');
 const basketRef = document.getElementById('basketRef');
-const amountRef = document.getElementById('amountRef');
 const subtotalRef = document.getElementById('subtotal');
 const sumRef = document.getElementById('sum');
 
 const basketRefMobile = document.getElementById('basketRefMobile');
-const amountRefMobile = document.getElementById('amountRefMobile');
 const subtotalRefMobile = document.getElementById('subtotalMobile');
 const sumRefMobile = document.getElementById('sumMobile');
 
@@ -174,7 +169,7 @@ function deleteFromBasket(indexBasket) {
     calculateSubtotal();
 }
 
-function openDialog(){
+function openDialog() {
     basketRef.innerHTML = "";
     subtotalRef.innerHTML = "";
     sumRef.innerHTML = "";
@@ -185,11 +180,11 @@ function openDialog(){
     dialogRef.showModal();
 }
 
-function closeDialog(){
+function closeDialog() {
     dialogRef.close();
 }
 
-function toggleBasketMobile(){
+function toggleBasketMobile() {
     let toggleBasket = document.getElementById('mobileBasket');
     if (toggleBasket.style.display === 'none'){
         toggleBasket.style.display = 'block';
