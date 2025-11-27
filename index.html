@@ -51,42 +51,42 @@
         </section>
 
         <nav>
-            <a href="#thaiSoupsRef">Thai Suppen</a>
-            <a href="#thaiSaladsRef">Thai Salate</a>
-            <a href="#thaiCurrysRef">Thai Currys</a>
-            <a href="#streetfoodRef">Garküche</a>
-            <a href="#noddlesRiceRef">Nudel- und Reisgerichte</a>
-            <a href="#dessertsRef">Desserts</a>
+            <a href="#thaiSoupsRefTitle">Thai Suppen</a>
+            <a href="#thaiSaladsRefTitle">Thai Salate</a>
+            <a href="#thaiCurrysRefTitle">Thai Currys</a>
+            <a href="#streetfoodRefTitle">Garküche</a>
+            <a href="#noodlesRiceRefTitle">Nudel- und Reisgerichte</a>
+            <a href="#dessertsRefTitle">Desserts</a>
         </nav>
 
         <section class="order_total_menu">
             <section class="total_menu" id="totalMenu">
-                <h3>Thai Suppen</h3>
+                <h3 id="thaiSoupsRefTitle">Thai Suppen</h3>
                 <img class="menu_images" src="assets/img/thai-boat-noodle-5256917_1280.jpg" alt="Thai Nudelsuppe">
                 <div class="menu_selection" id="thaiSoupsRef">
                 </div>
 
-                <h3>Thai Salate</h3>
+                <h3 id="thaiSaladsRefTitle">Thai Salate</h3>
                 <img class="menu_images" src="assets/img/pasta-7209002_1280.jpg" alt="Thai Salate">
                 <div class="menu_selection" id="thaiSaladsRef">
                 </div>
 
-                <h3>Thai Currys</h3>
+                <h3 id="thaiCurrysRefTitle">Thai Currys</h3>
                 <img class="menu_images" src="assets/img/curry-7249247_1280.jpg" alt="Thai Curry">
                 <div class="menu_selection" id="thaiCurrysRef">
                 </div>
 
-                <h3>Garküche</h3>
+                <h3 id="streetfoodRefTitle">Garküche</h3>
                 <img class="menu_images" src="assets/img/meal-5921491_1280.jpg" alt="Thai Streetfood">
                 <div class="menu_selection" id="streetfoodRef">
                 </div>
 
-                <h3>Nudel- und Reisgerichte</h3>
+                <h3 id="noodlesRiceRefTitle">Nudel- und Reisgerichte</h3>
                 <img class="menu_images" src="assets/img/shrimp-5940735_1280.jpg" alt="Thai Reisgericht">
-                <div class="menu_selection" id="noddlesRiceRef">
+                <div class="menu_selection" id="noodlesRiceRef">
                 </div>
 
-                <h3>Desserts</h3>
+                <h3 id="dessertsRefTitle">Desserts</h3>
                 <img class="menu_images" src="assets/img/mango-sticky-rice-3604851_1280.jpg" alt="Mango Sticky Rice">
                 <div class="menu_selection" id="dessertsRef">
                 </div>
@@ -114,11 +114,12 @@
                 </div>
             </section>
         </section>
+
+        <div class="toggle_button_ref">
+            <button onclick="toggleBasketMobile()" class="basket_toggle_button">Warenkorb</button>
+        </div>
     </main>
 
-    <div class="toggle_button_ref">
-        <button onclick="toggleBasketMobile()" class="basket_toggle_button">Warenkorb</button>
-    </div>
 
     <div class="total_basket_mobile" id="mobileBasket">
         <div class="toggle_button_ref">
