@@ -190,4 +190,8 @@ dialog::backdrop {
         padding: 4px;
         font-size: 12px;
     }
+
+    dialog {
+        width: 250px;
+    }
 }
