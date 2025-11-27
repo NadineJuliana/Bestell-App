@@ -17,15 +17,20 @@
 </head>
 
 <body onload="renderTotalMenu()">
+
     <header><img class="order_logo" src="assets/img/Logo.png" alt="Bestell-App Logo"></header>
+
     <main>
         <section class="order_head">
-            <div class="order_head_wrapper">
-                <img class="restaurant_main_logo" src="assets/img/curry-9746675_1280.jpg" alt="Asiatische Gewürze">
-                <img class="restaurant_logo" src="assets/img/lotus-flower.png" alt="Lotus Blume Logo">
+            <div class="outer_head_wrapper">
+                <div class="order_head_wrapper">
+                    <img class="restaurant_logo" src="assets/img/lotus-flower.png" alt="Lotus Blume Logo">
+                </div>
             </div>
+
             <div>
                 <h1>Asia Cuisine</h1>
+
                 <div class="rating">
                     <p>Bewertung</p>
                     <div class="rating_images">
@@ -35,8 +40,13 @@
                         <img src="assets/img/star.png" alt="Stern">
                         <img src="assets/img/star.png" alt="Stern">
                     </div>
-                    <p>(4,6 von 5 Sternen)</p>
                 </div>
+
+                <p class="restaurant_description">Frisch, aromatisch und authentisch: Asia Cuisine bietet originale
+                    thailändische Gerichte, die mit
+                    traditionellen Gewürzen, frischen Kräutern und viel Liebe zubereitet werden. Ob würziges Curry,
+                    aromatische Wok-Gerichte oder klassische Suppen – hier erlebst du den echten Geschmack Thailands.
+                    Perfekt zum schnellen Bestellen und Genießen!</p>
             </div>
         </section>
 
@@ -107,9 +117,14 @@
         </section>
     </main>
 
-    <button onclick="toggleBasketMobile()" id="basketToggle" class="basket_toggle_button">Warenkorb</button>
+    <div class="toggle_button_ref">
+        <button onclick="toggleBasketMobile()" class="basket_toggle_button">Warenkorb</button>
+    </div>
+
     <div class="total_basket_mobile" id="mobileBasket">
-        <h2>Warenkorb</h2>
+        <div class="toggle_button_ref">
+            <button onclick="toggleBasketMobile()" class="basket_toggle_button">Warenkorb</button>
+        </div>
         <div class="basket_content_mobile" id="basketRefMobile"></div>
         <div class="amount_content_mobile" id="amountRefMobile">
             <div class="amount_content_ref_mobile" id="subtotalMobile">
@@ -134,7 +149,7 @@
             <button onclick="closeDialog()">X</button>
         </div>
     </dialog>
-    
+
     <footer></footer>
 </body>
 
