@@ -1,11 +1,11 @@
 function getSoupsTemplate(indexSoup){
     return ` 
     <div class="menu_selection_ref">
-    <h4>${mySoups[indexSoup].name}</h4>
-    <p>${mySoups[indexSoup].description}</p>
-    <p class="ingredients">${mySoups[indexSoup].ingredients}</p>
-    <p>${(mySoups[indexSoup].price).toFixed(2)} €</p>
-    <button onclick="addSoupsToBasket(${indexSoup})">Hinzufügen</button>
+        <h4>${mySoups[indexSoup].name}</h4>
+        <p>${mySoups[indexSoup].description}</p>
+        <p class="ingredients">${mySoups[indexSoup].ingredients}</p>
+        <p>${(mySoups[indexSoup].price).toFixed(2)} €</p>
+        <button onclick="addSoupsToBasket(${indexSoup})">Hinzufügen</button>
     </div>
     `
 }
@@ -13,11 +13,11 @@ function getSoupsTemplate(indexSoup){
 function getSaladsTemplate(indexSalad){
     return `
     <div class="menu_selection_ref">
-    <h4>${mySalads[indexSalad].name}</h4>
-    <p>${mySalads[indexSalad].description}</p>
-    <p class="ingredients">${mySalads[indexSalad].ingredients}</p>
-    <p>${(mySalads[indexSalad].price).toFixed(2)} €</p>
-    <button onclick="addSaladsToBasket(${indexSalad})">Hinzufügen</button>
+        <h4>${mySalads[indexSalad].name}</h4>
+        <p>${mySalads[indexSalad].description}</p>
+        <p class="ingredients">${mySalads[indexSalad].ingredients}</p>
+        <p>${(mySalads[indexSalad].price).toFixed(2)} €</p>
+        <button onclick="addSaladsToBasket(${indexSalad})">Hinzufügen</button>
     </div>
     `
 }
@@ -37,11 +37,11 @@ function getCurrysTemplate(indexCurry){
 function getStreetfoodsTemplate(indexStreetfood){
     return `
     <div class="menu_selection_ref">
-    <h4>${myStreetfoodDishes[indexStreetfood].name}</h4>
-    <p>${myStreetfoodDishes[indexStreetfood].description}</p>
-    <p class="ingredients">${myStreetfoodDishes[indexStreetfood].ingredients}</p>
-    <p>${(myStreetfoodDishes[indexStreetfood].price).toFixed(2)} €</p>
-    <button onclick="addStreetfoodToBasket(${indexStreetfood})">Hinzufügen</button>
+        <h4>${myStreetfoodDishes[indexStreetfood].name}</h4>
+        <p>${myStreetfoodDishes[indexStreetfood].description}</p>
+        <p class="ingredients">${myStreetfoodDishes[indexStreetfood].ingredients}</p>
+        <p>${(myStreetfoodDishes[indexStreetfood].price).toFixed(2)} €</p>
+        <button onclick="addStreetfoodToBasket(${indexStreetfood})">Hinzufügen</button>
     </div>
     `
 }
@@ -49,11 +49,11 @@ function getStreetfoodsTemplate(indexStreetfood){
 function getNoddleRiceTemplate(indexNoodleRice){
     return `
     <div class="menu_selection_ref">
-    <h4>${myNoodleRiceDishes[indexNoodleRice].name}</h4>
-    <p>${myNoodleRiceDishes[indexNoodleRice].description}</p>
-    <p class="ingredients">${myNoodleRiceDishes[indexNoodleRice].ingredients}</p>
-    <p>${(myNoodleRiceDishes[indexNoodleRice].price).toFixed(2)} €</p>
-    <button onclick="addNoodlerRiceToBasket(${indexNoodleRice})">Hinzufügen</button>
+        <h4>${myNoodleRiceDishes[indexNoodleRice].name}</h4>
+        <p>${myNoodleRiceDishes[indexNoodleRice].description}</p>
+        <p class="ingredients">${myNoodleRiceDishes[indexNoodleRice].ingredients}</p>
+        <p>${(myNoodleRiceDishes[indexNoodleRice].price).toFixed(2)} €</p>
+        <button onclick="addNoodlerRiceToBasket(${indexNoodleRice})">Hinzufügen</button>
     </div>
     `
 }
@@ -61,11 +61,11 @@ function getNoddleRiceTemplate(indexNoodleRice){
 function getDessertsTemplate(indexDessert){
     return `
     <div class="menu_selection_ref">
-    <h4>${myDesserts[indexDessert].name}</h4>
-    <p>${myDesserts[indexDessert].description}</p>
-    <p class="ingredients">${myDesserts[indexDessert].ingredients}</p>
-    <p>${(myDesserts[indexDessert].price).toFixed(2)} €</p>
-    <button onclick="addDessertsToBasket(${indexDessert})">Hinzufügen</button>
+        <h4>${myDesserts[indexDessert].name}</h4>
+        <p>${myDesserts[indexDessert].description}</p>
+        <p class="ingredients">${myDesserts[indexDessert].ingredients}</p>
+        <p>${(myDesserts[indexDessert].price).toFixed(2)} €</p>
+        <button onclick="addDessertsToBasket(${indexDessert})">Hinzufügen</button>
     </div>
     `
 }

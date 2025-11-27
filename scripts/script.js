@@ -46,7 +46,7 @@ function renderStreetfoodMenu() {
 }
 
 function renderNoodlesRiceMenu() {
-    const noodlericeRef = document.getElementById('noddlesRiceRef');
+    const noodlericeRef = document.getElementById('noodlesRiceRef');
     for (let indexNoodleRice = 0; indexNoodleRice < myNoodleRiceDishes.length; indexNoodleRice++) {
         noodlericeRef.innerHTML += getNoddleRiceTemplate(indexNoodleRice);  
     }

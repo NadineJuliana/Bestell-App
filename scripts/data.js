@@ -1,4 +1,4 @@
-let mySoups = [
+const mySoups = [
     {
         "name": "TOM KHA",
         "price": 6.90,
@@ -29,7 +29,7 @@ let mySoups = [
     }
 ]
 
-let mySalads = [
+const mySalads = [
     {
         "name": "SOM TAM",
         "price": 13.50,
@@ -53,7 +53,7 @@ let mySalads = [
     }
 ]
 
-let myCurrys = [
+const myCurrys = [
     {
         "name": "GÄNG PED",
         "price": 16.50,
@@ -77,7 +77,7 @@ let myCurrys = [
     }
 ]
 
-let myStreetfoodDishes = [
+const myStreetfoodDishes = [
     {
         "name": "PAD KRAPAO",
         "price": 16.90,
@@ -101,7 +101,7 @@ let myStreetfoodDishes = [
     }
 ]
 
-let myNoodleRiceDishes = [
+const myNoodleRiceDishes = [
     {
         "name": "PAD THAI",
         "price": 15.50,
@@ -132,7 +132,7 @@ let myNoodleRiceDishes = [
     }
 ]
 
-let myDesserts = [
+const myDesserts = [
     {
         "name": "KAO NIAO MAMUANG",
         "price": 7.90,
@@ -156,4 +156,4 @@ let myDesserts = [
     }
 ]
 
-let myBasket = []
+const myBasket = []
